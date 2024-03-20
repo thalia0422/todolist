@@ -1,0 +1,198 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f4512c, #9d71bc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list-container {
+    background-color: #f8fffe;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1300px;
+    height: 700px; 
+    overflow-y: auto; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todos-container {
+    max-height: calc(100% - 120px); 
+    overflow-y: auto; 
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #5e1b89;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+}
+
+.todo-input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ff7f4d;
+    border-radius: 5px;
+    width: 925px;
+}
+
+.add-btn {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 70px;
+    height: 38px;
+    background-color: #9D71BC;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #ff7f4d;
+}
+
+.delete-all-btn {
+    margin-right: 10px; 
+    width: 100px;
+    height: 38px;
+    background-color: #f4512c; 
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-all-btn:hover {
+    background-color: #ff7f4d;
+}
+
+.mark-all-btn {
+    width: 150px;
+    height: 38px;
+    background-color: #5e1b89; 
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mark-all-btn:hover {
+    background-color: #7a299c;
+}
+
+.todos {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto; 
+}
+
+.todos li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.todos li .actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.todos li .actions button {
+    margin-left: 3px;
+}
+
+.todos li.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff3333;
+}
+
+.actions .edit-btn
+{
+    background-color: white;
+    color: black;
+    border: 1px solid #9D71BC;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions .delete-btn 
+{
+    background-color: white;
+    color: black;
+    border: 1px solid #FF7F4D;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.actions .edit-btn:hover,
+.actions .delete-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.todo-input:focus,
+.add-btn:focus,
+.delete-all-btn:focus {
+    border-color: #ff7f4d; 
+    box-shadow: 0 0 0 0.2rem rgba(255, 127, 77, 0.5);
+    outline: none; 
+}
+
+.mark-all-btn:focus,
+.edit-btn:focus,
+.add-btn:focus {
+    border-color: #5E1B89; 
+    box-shadow: #9D71BC;
+    outline: none; 
+}
+
+.no-task {
+    color: #5E1B89; 
+    font-size: smaller;
+}
